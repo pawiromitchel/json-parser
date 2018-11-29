@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON Parser</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+    <h1>JSON Parser</h1>
+    
+    <div>
+        <h2>Auth</h2>
+        <input type="text" id="loginUrl" placeholder="loginUrl">
+        <input type="text" name="" placeholder="username" id="loginUsername">
+        <input type="password" name="" placeholder="password" id="loginPassword">
+        <button onclick="doLogin()">Log in</button>
+    </div>
+
+    <div>
+        <h2>Request</h2>
+        <input type="text" id="requestUrl" placeholder="requestUrl">
+        <button onclick="doGetUsers()">Get users</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
