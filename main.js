@@ -83,7 +83,7 @@ function doRequestData() {
 function doGenerateViewer() {
     let columns = [];
     Object.keys(dataValues[0]).forEach(col => {
-        columns.push({ title: col, field: col });
+        columns.push({ title: col, field: col, headerFilter:"input" });
     });
 
     createViewer(`viewer-table`, dataValues, columns);
@@ -92,6 +92,7 @@ function doGenerateViewer() {
 function createViewer(elementID, tabledata, columns) {
     //create Tabulator on DOM element with id 'example-table'
     var table = new Tabulator(`#${elementID}`, {
+        headerFilterPlaceholder:"", //set column header placeholder text
         data: tabledata, //assign data to table
         layout: 'fitDataFill', //fit columns to width of table (optional)
         columns: columns,
