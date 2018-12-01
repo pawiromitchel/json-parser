@@ -15,26 +15,33 @@
 
 <body>
 
-    <h1>JSON Parser</h1>
+    <div class="container-fluid">
+        <h1>JSON Parser</h1>
 
-    <div>
-        <h2>Auth</h2>
-        <input type="text" id="loginUrl" placeholder="loginUrl">
-        <input type="text" name="" placeholder="username" id="loginUsername">
-        <input type="password" name="" placeholder="password" id="loginPassword">
-        <button onclick="doLogin()">Log in</button>
-    </div>
+        <div>
+            <input type="checkbox" name="toggleAuth" id="toggleAuth">
+            <label class="form-check-label" for="toggleAuth" onclick="toggleAuth()">Toggle Authentication</label>
+        </div>
 
-    <div>
-        <h2>Request</h2>
-        <input type="text" id="requestUrl" placeholder="requestUrl">
-        <button onclick="doRequestData()">Do Request</button>
-        <button onclick="doGenerateViewer()">Generate viewer</button>
-    </div>
+        <div id="authBlock">
+            <h2>Auth</h2>
+            <input type="text" id="loginUrl" placeholder="loginUrl">
+            <input type="text" name="" placeholder="username" id="loginUsername">
+            <input type="password" name="" placeholder="password" id="loginPassword">
+            <button onclick="doLogin()">Log in</button>
+        </div>
 
-    <div>
-        <h2>Viewer</h2>
-        <div id="viewer-table"></div>
+        <div>
+            <h2>Request</h2>
+            <input type="text" id="requestUrl" placeholder="requestUrl" value="https://restcountries.eu/rest/v2/all">
+            <button onclick="doRequestData()">Do Request</button>
+        </div>
+
+        <div>
+            <h2>Viewer</h2>
+            <div id="viewer-table"></div>
+        </div>
+
     </div>
 
     <script src="main.js"></script>
